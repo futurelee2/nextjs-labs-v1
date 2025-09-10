@@ -12,6 +12,7 @@ export default function PostsPage() {
 
   // 1. posts 데이터 패칭
   const fetchPosts = () => {
+    // 자체 내 서버를 가리킴 => 현재 폴더 내 api 를 가리킴 => api/posts 의 GET 요청
     fetch("/api/posts")
       .then((res) => res.json())
       .then(setPosts);
